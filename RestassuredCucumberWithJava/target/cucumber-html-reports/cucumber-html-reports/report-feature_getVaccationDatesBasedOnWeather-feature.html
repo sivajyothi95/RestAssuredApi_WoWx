@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Feature: get Dates For Vaccation Based On the Weather</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Restassured Cucumber With Java</td>
+              <td>1</td>
+            <td>08 Sep. 2019, 22:24</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">get Dates For Vaccation Based On the Weather</td>
+                    <td      class="passed"    >4</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">4</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="5599008494">5s 599ms</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">get Dates For Vaccation Based On the Weather</span>
+  
+
+  </div>
+
+        <div class="description indention"></div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">5s 599ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Get the dates of Thursday which has temperature of 10 degrees or higher at Sydney</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-2" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.beforeScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">034ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I prepare request for OpenWeather api</span>
+  
+  <span class="lead-duration duration">1s 066ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I request OpenWeather api to know the weather of Sydney</span>
+  
+  <span class="lead-duration duration">3s 652ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-4">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-4" class="collapse collapsable-details " >
+          
+          <pre><p>
+response: {
+    &quot;cod&quot;: &quot;200&quot;,
+    &quot;message&quot;: 0.0074,
+    &quot;cnt&quot;: 40,
+    &quot;list&quot;: [
+        {
+            &quot;dt&quot;: 1567954800,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 11.6,
+                &quot;temp_min&quot;: 10.28,
+                &quot;temp_max&quot;: 11.6,
+                &quot;pressure&quot;: 1008.94,
+                &quot;sea_level&quot;: 1008.94,
+                &quot;grnd_level&quot;: 998.97,
+                &quot;humidity&quot;: 60,
+                &quot;temp_kf&quot;: 1.32
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 802,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;scattered clouds&quot;,
+                    &quot;icon&quot;: &quot;03n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 47
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 5.76,
+                &quot;deg&quot;: 264.463
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-08 15:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1567965600,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 11.04,
+                &quot;temp_min&quot;: 10.05,
+                &quot;temp_max&quot;: 11.04,
+                &quot;pressure&quot;: 1009.16,
+                &quot;sea_level&quot;: 1009.16,
+                &quot;grnd_level&quot;: 999.26,
+                &quot;humidity&quot;: 54,
+                &quot;temp_kf&quot;: 0.99
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 74
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 4.92,
+                &quot;deg&quot;: 233.191
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-08 18:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1567976400,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 9.75,
+                &quot;temp_min&quot;: 9.09,
+                &quot;temp_max&quot;: 9.75,
+                &quot;pressure&quot;: 1010.99,
+                &quot;sea_level&quot;: 1010.99,
+                &quot;grnd_level&quot;: 1001.13,
+                &quot;humidity&quot;: 57,
+                &quot;temp_kf&quot;: 0.66
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 804,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;overcast clouds&quot;,
+                    &quot;icon&quot;: &quot;04d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 99
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 4.47,
+                &quot;deg&quot;: 241.023
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-08 21:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1567987200,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 14.07,
+                &quot;temp_min&quot;: 13.74,
+                &quot;temp_max&quot;: 14.07,
+                &quot;pressure&quot;: 1011.87,
+                &quot;sea_level&quot;: 1011.87,
+                &quot;grnd_level&quot;: 1002.15,
+                &quot;humidity&quot;: 34,
+                &quot;temp_kf&quot;: 0.33
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 73
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 5.9,
+                &quot;deg&quot;: 230.294
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-09 00:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1567998000,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 14.54,
+                &quot;temp_min&quot;: 14.54,
+                &quot;temp_max&quot;: 14.54,
+                &quot;pressure&quot;: 1011.85,
+                &quot;sea_level&quot;: 1011.85,
+                &quot;grnd_level&quot;: 1002.16,
+                &quot;humidity&quot;: 40,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 63
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 5.87,
+                &quot;deg&quot;: 227.369
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-09 03:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568008800,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 14.29,
+                &quot;temp_min&quot;: 14.29,
+                &quot;temp_max&quot;: 14.29,
+                &quot;pressure&quot;: 1012.9,
+                &quot;sea_level&quot;: 1012.9,
+                &quot;grnd_level&quot;: 1003.77,
+                &quot;humidity&quot;: 43,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 500,
+                    &quot;main&quot;: &quot;Rain&quot;,
+                    &quot;description&quot;: &quot;light rain&quot;,
+                    &quot;icon&quot;: &quot;10d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 81
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 5.31,
+                &quot;deg&quot;: 204.707
+            },
+            &quot;rain&quot;: {
+                &quot;3h&quot;: 0.687
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-09 06:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568019600,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 11.02,
+                &quot;temp_min&quot;: 11.02,
+                &quot;temp_max&quot;: 11.02,
+                &quot;pressure&quot;: 1016.75,
+                &quot;sea_level&quot;: 1016.75,
+                &quot;grnd_level&quot;: 1007.5,
+                &quot;humidity&quot;: 49,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 79
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 4.11,
+                &quot;deg&quot;: 203.634
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-09 09:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568030400,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 9.45,
+                &quot;temp_min&quot;: 9.45,
+                &quot;temp_max&quot;: 9.45,
+                &quot;pressure&quot;: 1019.99,
+                &quot;sea_level&quot;: 1019.99,
+                &quot;grnd_level&quot;: 1010.56,
+                &quot;humidity&quot;: 52,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 83
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 5.28,
+                &quot;deg&quot;: 220.73
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-09 12:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568041200,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 7.05,
+                &quot;temp_min&quot;: 7.05,
+                &quot;temp_max&quot;: 7.05,
+                &quot;pressure&quot;: 1021.04,
+                &quot;sea_level&quot;: 1021.04,
+                &quot;grnd_level&quot;: 1011.45,
+                &quot;humidity&quot;: 57,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 801,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;few clouds&quot;,
+                    &quot;icon&quot;: &quot;02n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 21
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 4.06,
+                &quot;deg&quot;: 223.892
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-09 15:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568052000,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 5.75,
+                &quot;temp_min&quot;: 5.75,
+                &quot;temp_max&quot;: 5.75,
+                &quot;pressure&quot;: 1022.07,
+                &quot;sea_level&quot;: 1022.07,
+                &quot;grnd_level&quot;: 1012.24,
+                &quot;humidity&quot;: 59,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 801,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;few clouds&quot;,
+                    &quot;icon&quot;: &quot;02n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 11
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 3.84,
+                &quot;deg&quot;: 233.542
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-09 18:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568062800,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 6.64,
+                &quot;temp_min&quot;: 6.64,
+                &quot;temp_max&quot;: 6.64,
+                &quot;pressure&quot;: 1023.71,
+                &quot;sea_level&quot;: 1023.71,
+                &quot;grnd_level&quot;: 1014,
+                &quot;humidity&quot;: 58,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 3.65,
+                &quot;deg&quot;: 229.13
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-09 21:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568073600,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 10.79,
+                &quot;temp_min&quot;: 10.79,
+                &quot;temp_max&quot;: 10.79,
+                &quot;pressure&quot;: 1024.71,
+                &quot;sea_level&quot;: 1024.71,
+                &quot;grnd_level&quot;: 1015.72,
+                &quot;humidity&quot;: 55,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 802,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;scattered clouds&quot;,
+                    &quot;icon&quot;: &quot;03d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 29
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 4.58,
+                &quot;deg&quot;: 187.888
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-10 00:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568084400,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 13.39,
+                &quot;temp_min&quot;: 13.39,
+                &quot;temp_max&quot;: 13.39,
+                &quot;pressure&quot;: 1023.84,
+                &quot;sea_level&quot;: 1023.84,
+                &quot;grnd_level&quot;: 1015.13,
+                &quot;humidity&quot;: 50,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 804,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;overcast clouds&quot;,
+                    &quot;icon&quot;: &quot;04d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 90
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 4.99,
+                &quot;deg&quot;: 174.139
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-10 03:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568095200,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 14.55,
+                &quot;temp_min&quot;: 14.55,
+                &quot;temp_max&quot;: 14.55,
+                &quot;pressure&quot;: 1024.11,
+                &quot;sea_level&quot;: 1024.11,
+                &quot;grnd_level&quot;: 1015.29,
+                &quot;humidity&quot;: 50,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 56
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 5.76,
+                &quot;deg&quot;: 164.802
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-10 06:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568106000,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 11.12,
+                &quot;temp_min&quot;: 11.12,
+                &quot;temp_max&quot;: 11.12,
+                &quot;pressure&quot;: 1027.34,
+                &quot;sea_level&quot;: 1027.34,
+                &quot;grnd_level&quot;: 1017.41,
+                &quot;humidity&quot;: 70,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 3.35,
+                &quot;deg&quot;: 163.486
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-10 09:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568116800,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 8.77,
+                &quot;temp_min&quot;: 8.77,
+                &quot;temp_max&quot;: 8.77,
+                &quot;pressure&quot;: 1029.18,
+                &quot;sea_level&quot;: 1029.18,
+                &quot;grnd_level&quot;: 1019.28,
+                &quot;humidity&quot;: 79,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 6
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.07,
+                &quot;deg&quot;: 237.868
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-10 12:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568127600,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 6.67,
+                &quot;temp_min&quot;: 6.67,
+                &quot;temp_max&quot;: 6.67,
+                &quot;pressure&quot;: 1029.04,
+                &quot;sea_level&quot;: 1029.04,
+                &quot;grnd_level&quot;: 1019.23,
+                &quot;humidity&quot;: 82,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 4
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.38,
+                &quot;deg&quot;: 248.011
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-10 15:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568138400,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 6.76,
+                &quot;temp_min&quot;: 6.76,
+                &quot;temp_max&quot;: 6.76,
+                &quot;pressure&quot;: 1028.78,
+                &quot;sea_level&quot;: 1028.78,
+                &quot;grnd_level&quot;: 1018.79,
+                &quot;humidity&quot;: 82,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 2
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.35,
+                &quot;deg&quot;: 247.134
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-10 18:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568149200,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 7.87,
+                &quot;temp_min&quot;: 7.87,
+                &quot;temp_max&quot;: 7.87,
+                &quot;pressure&quot;: 1030.61,
+                &quot;sea_level&quot;: 1030.61,
+                &quot;grnd_level&quot;: 1020.82,
+                &quot;humidity&quot;: 78,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.31,
+                &quot;deg&quot;: 260.04
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-10 21:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568160000,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 16.95,
+                &quot;temp_min&quot;: 16.95,
+                &quot;temp_max&quot;: 16.95,
+                &quot;pressure&quot;: 1030.05,
+                &quot;sea_level&quot;: 1030.05,
+                &quot;grnd_level&quot;: 1020.73,
+                &quot;humidity&quot;: 47,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 1.32,
+                &quot;deg&quot;: 326.466
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-11 00:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568170800,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 19.04,
+                &quot;temp_min&quot;: 19.04,
+                &quot;temp_max&quot;: 19.04,
+                &quot;pressure&quot;: 1027.88,
+                &quot;sea_level&quot;: 1027.88,
+                &quot;grnd_level&quot;: 1018.46,
+                &quot;humidity&quot;: 38,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.3,
+                &quot;deg&quot;: 16.549
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-11 03:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568181600,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 17.39,
+                &quot;temp_min&quot;: 17.39,
+                &quot;temp_max&quot;: 17.39,
+                &quot;pressure&quot;: 1026.27,
+                &quot;sea_level&quot;: 1026.27,
+                &quot;grnd_level&quot;: 1016.57,
+                &quot;humidity&quot;: 48,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 4.56,
+                &quot;deg&quot;: 62.851
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-11 06:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568192400,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 12.55,
+                &quot;temp_min&quot;: 12.55,
+                &quot;temp_max&quot;: 12.55,
+                &quot;pressure&quot;: 1028.15,
+                &quot;sea_level&quot;: 1028.15,
+                &quot;grnd_level&quot;: 1018.43,
+                &quot;humidity&quot;: 69,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 1.71,
+                &quot;deg&quot;: 24.48
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-11 09:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568203200,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 11.05,
+                &quot;temp_min&quot;: 11.05,
+                &quot;temp_max&quot;: 11.05,
+                &quot;pressure&quot;: 1027.95,
+                &quot;sea_level&quot;: 1027.95,
+                &quot;grnd_level&quot;: 1018.07,
+                &quot;humidity&quot;: 75,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 1.51,
+                &quot;deg&quot;: 313.87
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-11 12:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568214000,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 9.06,
+                &quot;temp_min&quot;: 9.06,
+                &quot;temp_max&quot;: 9.06,
+                &quot;pressure&quot;: 1026.7,
+                &quot;sea_level&quot;: 1026.7,
+                &quot;grnd_level&quot;: 1016.72,
+                &quot;humidity&quot;: 86,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 801,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;few clouds&quot;,
+                    &quot;icon&quot;: &quot;02n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 11
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 1.71,
+                &quot;deg&quot;: 276.692
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-11 15:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568224800,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 8.06,
+                &quot;temp_min&quot;: 8.06,
+                &quot;temp_max&quot;: 8.06,
+                &quot;pressure&quot;: 1024.53,
+                &quot;sea_level&quot;: 1024.53,
+                &quot;grnd_level&quot;: 1014.52,
+                &quot;humidity&quot;: 79,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 802,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;scattered clouds&quot;,
+                    &quot;icon&quot;: &quot;03n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 46
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.05,
+                &quot;deg&quot;: 273.519
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-11 18:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568235600,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 8.77,
+                &quot;temp_min&quot;: 8.77,
+                &quot;temp_max&quot;: 8.77,
+                &quot;pressure&quot;: 1023.82,
+                &quot;sea_level&quot;: 1023.82,
+                &quot;grnd_level&quot;: 1014.13,
+                &quot;humidity&quot;: 67,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 77
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.62,
+                &quot;deg&quot;: 275.745
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-11 21:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568246400,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 17.65,
+                &quot;temp_min&quot;: 17.65,
+                &quot;temp_max&quot;: 17.65,
+                &quot;pressure&quot;: 1021.86,
+                &quot;sea_level&quot;: 1021.86,
+                &quot;grnd_level&quot;: 1012.26,
+                &quot;humidity&quot;: 32,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 78
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 3.91,
+                &quot;deg&quot;: 302.083
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-12 00:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568257200,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 24.62,
+                &quot;temp_min&quot;: 24.62,
+                &quot;temp_max&quot;: 24.62,
+                &quot;pressure&quot;: 1019.09,
+                &quot;sea_level&quot;: 1019.09,
+                &quot;grnd_level&quot;: 1008.79,
+                &quot;humidity&quot;: 20,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 802,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;scattered clouds&quot;,
+                    &quot;icon&quot;: &quot;03d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 33
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 6.05,
+                &quot;deg&quot;: 244.092
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-12 03:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568268000,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 22.55,
+                &quot;temp_min&quot;: 22.55,
+                &quot;temp_max&quot;: 22.55,
+                &quot;pressure&quot;: 1016.87,
+                &quot;sea_level&quot;: 1016.87,
+                &quot;grnd_level&quot;: 1007.08,
+                &quot;humidity&quot;: 32,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 802,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;scattered clouds&quot;,
+                    &quot;icon&quot;: &quot;03d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 48
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 3.15,
+                &quot;deg&quot;: 202.676
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-12 06:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568278800,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 16.61,
+                &quot;temp_min&quot;: 16.61,
+                &quot;temp_max&quot;: 16.61,
+                &quot;pressure&quot;: 1018.48,
+                &quot;sea_level&quot;: 1018.48,
+                &quot;grnd_level&quot;: 1009.32,
+                &quot;humidity&quot;: 47,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 500,
+                    &quot;main&quot;: &quot;Rain&quot;,
+                    &quot;description&quot;: &quot;light rain&quot;,
+                    &quot;icon&quot;: &quot;10n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 100
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.5,
+                &quot;deg&quot;: 262.81
+            },
+            &quot;rain&quot;: {
+                &quot;3h&quot;: 0.062
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-12 09:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568289600,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 14.45,
+                &quot;temp_min&quot;: 14.45,
+                &quot;temp_max&quot;: 14.45,
+                &quot;pressure&quot;: 1018.3,
+                &quot;sea_level&quot;: 1018.3,
+                &quot;grnd_level&quot;: 1008.63,
+                &quot;humidity&quot;: 48,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 803,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;broken clouds&quot;,
+                    &quot;icon&quot;: &quot;04n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 63
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.86,
+                &quot;deg&quot;: 302.894
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-12 12:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568300400,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 12.35,
+                &quot;temp_min&quot;: 12.35,
+                &quot;temp_max&quot;: 12.35,
+                &quot;pressure&quot;: 1017.39,
+                &quot;sea_level&quot;: 1017.39,
+                &quot;grnd_level&quot;: 1007.69,
+                &quot;humidity&quot;: 55,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 1.81,
+                &quot;deg&quot;: 256.44
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-12 15:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568311200,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 12.15,
+                &quot;temp_min&quot;: 12.15,
+                &quot;temp_max&quot;: 12.15,
+                &quot;pressure&quot;: 1017.51,
+                &quot;sea_level&quot;: 1017.51,
+                &quot;grnd_level&quot;: 1007.57,
+                &quot;humidity&quot;: 57,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 3.15,
+                &quot;deg&quot;: 252.02
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-12 18:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568322000,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 12.75,
+                &quot;temp_min&quot;: 12.75,
+                &quot;temp_max&quot;: 12.75,
+                &quot;pressure&quot;: 1019.58,
+                &quot;sea_level&quot;: 1019.58,
+                &quot;grnd_level&quot;: 1009.61,
+                &quot;humidity&quot;: 62,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.68,
+                &quot;deg&quot;: 232.852
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-12 21:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568332800,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 19.35,
+                &quot;temp_min&quot;: 19.35,
+                &quot;temp_max&quot;: 19.35,
+                &quot;pressure&quot;: 1019.16,
+                &quot;sea_level&quot;: 1019.16,
+                &quot;grnd_level&quot;: 1009.81,
+                &quot;humidity&quot;: 49,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 4
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 2.61,
+                &quot;deg&quot;: 132.824
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-13 00:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568343600,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 19.07,
+                &quot;temp_min&quot;: 19.07,
+                &quot;temp_max&quot;: 19.07,
+                &quot;pressure&quot;: 1016.64,
+                &quot;sea_level&quot;: 1016.64,
+                &quot;grnd_level&quot;: 1007.27,
+                &quot;humidity&quot;: 52,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 802,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;scattered clouds&quot;,
+                    &quot;icon&quot;: &quot;03d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 26
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 3.77,
+                &quot;deg&quot;: 102.316
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-13 03:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568354400,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 17.87,
+                &quot;temp_min&quot;: 17.87,
+                &quot;temp_max&quot;: 17.87,
+                &quot;pressure&quot;: 1013.72,
+                &quot;sea_level&quot;: 1013.72,
+                &quot;grnd_level&quot;: 1004.59,
+                &quot;humidity&quot;: 55,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 801,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;few clouds&quot;,
+                    &quot;icon&quot;: &quot;02d&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 20
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 3.55,
+                &quot;deg&quot;: 77.013
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;d&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-13 06:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568365200,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 13.53,
+                &quot;temp_min&quot;: 13.53,
+                &quot;temp_max&quot;: 13.53,
+                &quot;pressure&quot;: 1015.54,
+                &quot;sea_level&quot;: 1015.54,
+                &quot;grnd_level&quot;: 1006.48,
+                &quot;humidity&quot;: 75,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 800,
+                    &quot;main&quot;: &quot;Clear&quot;,
+                    &quot;description&quot;: &quot;clear sky&quot;,
+                    &quot;icon&quot;: &quot;01n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 0
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 0.72,
+                &quot;deg&quot;: 294.166
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-13 09:00:00&quot;
+        },
+        {
+            &quot;dt&quot;: 1568376000,
+            &quot;main&quot;: {
+                &quot;temp&quot;: 14.65,
+                &quot;temp_min&quot;: 14.65,
+                &quot;temp_max&quot;: 14.65,
+                &quot;pressure&quot;: 1014.35,
+                &quot;sea_level&quot;: 1014.35,
+                &quot;grnd_level&quot;: 1005.04,
+                &quot;humidity&quot;: 69,
+                &quot;temp_kf&quot;: 0
+            },
+            &quot;weather&quot;: [
+                {
+                    &quot;id&quot;: 802,
+                    &quot;main&quot;: &quot;Clouds&quot;,
+                    &quot;description&quot;: &quot;scattered clouds&quot;,
+                    &quot;icon&quot;: &quot;03n&quot;
+                }
+            ],
+            &quot;clouds&quot;: {
+                &quot;all&quot;: 50
+            },
+            &quot;wind&quot;: {
+                &quot;speed&quot;: 1.17,
+                &quot;deg&quot;: 310.58
+            },
+            &quot;sys&quot;: {
+                &quot;pod&quot;: &quot;n&quot;
+            },
+            &quot;dt_txt&quot;: &quot;2019-09-13 12:00:00&quot;
+        }
+    ],
+    &quot;city&quot;: {
+        &quot;id&quot;: 2147714,
+        &quot;name&quot;: &quot;Sydney&quot;,
+        &quot;coord&quot;: {
+            &quot;lat&quot;: -33.8679,
+            &quot;lon&quot;: 151.2073
+        },
+        &quot;country&quot;: &quot;AU&quot;,
+        &quot;timezone&quot;: 36000,
+        &quot;sunrise&quot;: 1567886722,
+        &quot;sunset&quot;: 1567928478
+    }
+}
+</p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the status code is 200</span>
+  
+  <span class="lead-duration duration">084ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-5">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-5" class="collapse collapsable-details " >
+          
+          <pre><p>
+Status Code 200
+</p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I should see the dates which has temperature greater than 10 on THURSDAY</span>
+  
+  <span class="lead-duration duration">794ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-6">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-6" class="collapse collapsable-details " >
+          
+          <pre><p>
+The Temperature on 2019-09-12 00:00:00 is 17.65
+</p><p>
+The Temperature on 2019-09-12 03:00:00 is 24.62
+</p><p>
+The Temperature on 2019-09-12 06:00:00 is 22.55
+</p><p>
+The Temperature on 2019-09-12 09:00:00 is 16.61
+</p><p>
+The Temperature on 2019-09-12 12:00:00 is 14.45
+</p><p>
+The Temperature on 2019-09-12 15:00:00 is 12.35
+</p><p>
+The Temperature on 2019-09-12 18:00:00 is 12.15
+</p><p>
+The Temperature on 2019-09-12 21:00:00 is 12.75
+</p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-7" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.afterScenario()</span>
+                        
+  <span class="lead-duration duration">000ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
